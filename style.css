@@ -1,0 +1,592 @@
+================================
+   CONFIGURAÇÕES GERAIS
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b0b0b;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* ========================================
+   CABEÇALHO
+======================================== */
+
+header {
+    width: 100%;
+    padding: 20px 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #050505;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    border-bottom: 2px solid #d00000;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.logo span {
+    color: #e00000;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: #e00000;
+}
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+    min-height: 650px;
+    padding: 80px 8%;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.95),
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.2)
+        ),
+        url("https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&w=1600&q=80")
+        center / cover no-repeat;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero h1 {
+    font-size: 65px;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #e00000;
+}
+
+.hero p {
+    max-width: 600px;
+
+    color: #dddddd;
+    font-size: 20px;
+
+    margin-bottom: 35px;
+}
+
+
+/* ========================================
+   BOTÃO
+======================================== */
+
+.btn {
+    display: inline-block;
+
+    padding: 15px 32px;
+
+    background: #d00000;
+    color: #ffffff;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    border-radius: 4px;
+
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #ff0000;
+    transform: translateY(-4px);
+
+    box-shadow: 0 8px 20px rgba(255, 0, 0, 0.3);
+}
+
+
+/* ========================================
+   SEÇÕES
+======================================== */
+
+section {
+    padding: 90px 8%;
+}
+
+.title {
+    text-align: center;
+
+    font-size: 40px;
+    font-weight: 900;
+
+    text-transform: uppercase;
+
+    margin-bottom: 55px;
+}
+
+.title span {
+    color: #e00000;
+}
+
+
+/* ========================================
+   SEÇÃO SOBRE
+======================================== */
+
+.about {
+    background: #151515;
+}
+
+.about-container {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 55px;
+
+    align-items: center;
+}
+
+.about img {
+    width: 100%;
+    height: 450px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+    border-left: 5px solid #d00000;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+.about-text h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    color: #cccccc;
+    font-size: 16px;
+
+    margin-bottom: 18px;
+}
+
+
+/* ========================================
+   PRINCÍPIOS
+======================================== */
+
+.principles {
+    background: #0b0b0b;
+}
+
+.cards {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.card {
+    padding: 40px 25px;
+
+    text-align: center;
+
+    background: #191919;
+
+    border-radius: 8px;
+
+    border-bottom: 4px solid #d00000;
+
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+
+    background: #222222;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #bbbbbb;
+}
+
+
+/* ========================================
+   FAIXAS
+======================================== */
+
+.belts {
+    background: #151515;
+}
+
+.belt-container {
+    max-width: 1100px;
+    margin: auto;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+.belt {
+    width: 180px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 4px;
+
+    font-weight: bold;
+
+    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
+
+    transition: 0.3s ease;
+}
+
+.belt:hover {
+    transform: scale(1.05);
+}
+
+
+/* CORES DAS FAIXAS */
+
+.white {
+    background: #eeeeee;
+    color: #111111;
+}
+
+.yellow {
+    background: #e8c900;
+    color: #111111;
+}
+
+.orange {
+    background: #e87500;
+}
+
+.green {
+    background: #168b35;
+}
+
+.blue {
+    background: #1559b0;
+}
+
+.brown {
+    background: #713c1e;
+}
+
+.black {
+    background: #000000;
+    border: 1px solid #555555;
+}
+
+
+/* ========================================
+   BENEFÍCIOS
+======================================== */
+
+.benefits {
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.88),
+            rgba(0, 0, 0, 0.88)
+        ),
+        url("https://images.unsplash.com/photo-1555597408-26bc8e548a46?auto=format&fit=crop&w=1600&q=80")
+        center / cover no-repeat;
+
+    background-attachment: fixed;
+}
+
+.benefit-list {
+    max-width: 850px;
+    margin: auto;
+}
+
+.benefit {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 20px;
+
+    padding: 25px 0;
+
+    border-bottom: 1px solid #333333;
+}
+
+.check {
+    min-width: 35px;
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #d00000;
+
+    border-radius: 50%;
+
+    color: white;
+
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.benefit h3 {
+    font-size: 21px;
+    margin-bottom: 5px;
+}
+
+.benefit p {
+    color: #bbbbbb;
+}
+
+
+/* ========================================
+   CONTATO
+======================================== */
+
+.contact {
+    padding: 90px 8%;
+
+    text-align: center;
+
+    background: #d00000;
+}
+
+.contact h2 {
+    font-size: 42px;
+    text-transform: uppercase;
+
+    margin-bottom: 15px;
+}
+
+.contact p {
+    max-width: 650px;
+    margin: 0 auto 30px;
+
+    color: #eeeeee;
+}
+
+.contact .btn {
+    background: #ffffff;
+    color: #111111;
+}
+
+.contact .btn:hover {
+    background: #dddddd;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+/* ========================================
+   RODAPÉ
+======================================== */
+
+footer {
+    padding: 30px 8%;
+
+    text-align: center;
+
+    background: #050505;
+
+    color: #777777;
+
+    border-top: 1px solid #222222;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+
+/* ========================================
+   RESPONSIVIDADE - TABLET
+======================================== */
+
+@media (max-width: 900px) {
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about img {
+        height: 400px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        max-width: 500px;
+        margin: auto;
+        width: 100%;
+    }
+}
+
+
+/* ========================================
+   RESPONSIVIDADE - CELULAR
+======================================== */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 18px 5%;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    nav {
+        gap: 12px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    section {
+        padding: 65px 5%;
+    }
+
+    .hero {
+        min-height: 560px;
+
+        padding: 60px 5%;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .title {
+        font-size: 30px;
+        margin-bottom: 40px;
+    }
+
+    .about img {
+        height: 300px;
+    }
+
+    .about-text h3 {
+        font-size: 27px;
+    }
+
+    .belt {
+        width: 140px;
+        height: 50px;
+    }
+
+    .contact h2 {
+        font-size: 32px;
+    }
+
+    .benefit {
+        gap: 12px;
+    }
+}
+
+Depois, no seu index.html, remova o <style>...</style> e coloque dentro do <head>:
+
+<link rel="stylesheet" href="style.css">
+
+A estrutura ficará:
+
+site-karate/
+│
+├── index.html
+└── style.css

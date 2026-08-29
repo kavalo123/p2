@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Karatê | Disciplina, Força e Respeito</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #111;
+            color: #fff;
+        }
+
+        /* HEADER */
+
+        header {
+            background: #080808;
+            padding: 20px 8%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            border-bottom: 2px solid #c90000;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+        .logo span {
+            color: #e00000;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #e00000;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 650px;
+
+            display: flex;
+            align-items: center;
+
+            padding: 80px 8%;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0, 0, 0, 0.9),
+                    rgba(0, 0, 0, 0.45)
+                ),
+                url("https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&w=1600&q=80")
+                center / cover;
+        }
+
+        .hero-content {
+            max-width: 650px;
+        }
+
+        .hero h1 {
+            font-size: 65px;
+            line-height: 1;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 span {
+            color: #e00000;
+        }
+
+        .hero p {
+            font-size: 20px;
+            line-height: 1.6;
+            color: #ddd;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+
+            padding: 15px 30px;
+
+            background: #d00000;
+            color: white;
+
+            text-decoration: none;
+            font-weight: bold;
+
+            border-radius: 4px;
+
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #ff0000;
+            transform: translateY(-3px);
+        }
+
+        /* SEÇÕES */
+
+        section {
+            padding: 80px 8%;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+        }
+
+        .title span {
+            color: #e00000;
+        }
+
+        /* SOBRE */
+
+        .about {
+            background: #181818;
+        }
+
+        .about-container {
+            max-width: 1000px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+
+            align-items: center;
+        }
+
+        .about img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .about-text h3 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            color: #ccc;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        /* PRINCÍPIOS */
+
+        .principles {
+            background: #0d0d0d;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: #1b1b1b;
+            padding: 35px 25px;
+
+            text-align: center;
+
+            border-radius: 8px;
+            border-bottom: 4px solid #c90000;
+
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            background: #222;
+        }
+
+        .icon {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            font-size: 23px;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #bbb;
+            line-height: 1.6;
+        }
+
+        /* FAIXAS */
+
+        .belts {
+            background: #181818;
+        }
+
+        .belt-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .belt {
+            width: 180px;
+            height: 55px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: white;
+            font-weight: bold;
+
+            border-radius: 4px;
+            box-shadow: 0 5px 10px rgba(0,0,0,.4);
+        }
+
+        .white {
+            background: #eee;
+            color: #111;
+        }
+
+        .yellow {
+            background: #e8c900;
+            color: #111;
+        }
+
+        .orange {
+            background: #e87500;
+        }
+
+        .green {
+            background: #168b35;
+        }
+
+        .blue {
+            background: #1559b0;
+        }
+
+        .brown {
+            background: #713c1e;
+        }
+
+        .black {
+            background: #000;
+            border: 1px solid #444;
+        }
+
+        /* BENEFÍCIOS */
+
+        .benefits {
+            background:
+                linear-gradient(
+                    rgba(0,0,0,.85),
+                    rgba(0,0,0,.85)
+                ),
+                url("https://images.unsplash.com/photo-1555597408-26bc8e548a46?auto=format&fit=crop&w=1600&q=80")
+                center / cover;
+        }
+
+        .benefit-list {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .benefit {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            padding: 20px;
+
+            border-bottom: 1px solid #444;
+        }
+
+        .check {
+            color: #e00000;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .benefit h3 {
+            margin-bottom: 5px;
+        }
+
+        .benefit p {
+            color: #bbb;
+        }
+
+        /* CONTATO */
+
+        .contact {
+            background: #e00000;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .contact p {
+            margin-bottom: 30px;
+        }
+
+        .contact .btn {
+            background: #fff;
+            color: #111;
+        }
+
+        .contact .btn:hover {
+            background: #ddd;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #050505;
+            padding: 30px 8%;
+            text-align: center;
+            color: #888;
+        }
+
+        /* RESPONSIVIDADE */
+
+        @media (max-width: 900px) {
+
+            .about-container {
+                grid-template-columns: 1fr;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 50px;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav a {
+                font-size: 14px;
+            }
+
+            .hero {
+                min-height: 550px;
+                padding: 60px 6%;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            section {
+                padding: 60px 6%;
+            }
+
+            .title {
+                font-size: 32px;
+            }
+
+            .belt {
+                width: 140px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+
+    <header>
+
+        <div class="logo">
+            KARATÊ<span>+</span>
+        </div>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#principios">Princípios</a>
+            <a href="#faixas">Faixas</a>
+            <a href="#beneficios">Benefícios</a>
+        </nav>
+
+    </header>
+
+
+    <!-- INÍCIO -->
+
+    <section class="hero" id="inicio">
+
+        <div class="hero-content">
+
+            <h1>
+                Força.<br>
+                <span>Disciplina.</span><br>
+                Respeito.
+            </h1>
+
+            <p>
+                O Karatê é uma arte marcial que desenvolve o corpo,
+                a mente e o espírito através de treinamento,
+                disciplina e dedicação.
+            </p>
+
+            <a href="#sobre" class="btn">
+                Conheça o Karatê
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- SOBRE -->
+
+    <section class="about" id="sobre">
+
+        <h2 class="title">
+            Sobre o <span>Karatê</span>
+        </h2>
+
+        <div class="about-container">
+
+            <img
+                src="https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&w=900&q=80"
+                alt="Praticante de karatê"
+            >
+
+            <div class="about-text">
+
+                <h3>Mais do que uma luta</h3>
+
+                <p>
+                    O Karatê é uma arte marcial de origem japonesa
+                    conhecida por seus golpes, técnicas de defesa,
+                    disciplina e filosofia.
+                </p>
+
+                <p>
+                    A prática envolve movimentos como socos, chutes,
+                    bloqueios e deslocamentos, além de exercícios
+                    tradicionais como o kata e o kumite.
+                </p>
+
+                <p>
+                    Seu objetivo vai além da competição: busca
+                    desenvolver autocontrole, concentração,
+                    respeito e confiança.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRINCÍPIOS -->
+
+    <section class="principles" id="principios">
+
+        <h2 class="title">
+            Princípios do <span>Karatê</span>
+        </h2>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <div class="icon">🥋</div>
+
+                <h3>Disciplina</h3>
+
+                <p>
+                    Aprenda a manter o foco e a dedicação
+                    durante sua evolução.
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <div class="icon">💪</div>
+
+                <h3>Força</h3>
+
+                <p>
+                    Desenvolva força, resistência,
+                    equilíbrio e coordenação.
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <div class="icon">🧠</div>
+
+                <h3>Concentração</h3>
+
+                <p>
+                    Treine sua mente para manter
+                    controle e atenção.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FAIXAS -->
+
+    <section class="belts" id="faixas">
+
+        <h2 class="title">
+            Graduação das <span>Faixas</span>
+        </h2>
+
+        <div class="belt-container">
+
+            <div class="belt white">
+                Branca
+            </div>
+
+            <div class="belt yellow">
+                Amarela
+            </div>
+
+            <div class="belt orange">
+                Laranja
+            </div>
+
+            <div class="belt green">
+                Verde
+            </div>
+
+            <div class="belt blue">
+                Azul
+            </div>
+
+            <div class="belt brown">
+                Marrom
+            </div>
+
+            <div class="belt black">
+                Preta
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- BENEFÍCIOS -->
+
+    <section class="benefits" id="beneficios">
+
+        <h2 class="title">
+            Benefícios da <span>Prática</span>
+        </h2>
+
+        <div class="benefit-list">
+
+            <div class="benefit">
+
+                <div class="check">✓</div>
+
+                <div>
+                    <h3>Condicionamento físico</h3>
+
+                    <p>
+                        Ajuda a desenvolver resistência,
+                        flexibilidade e coordenação.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="benefit">
+
+                <div class="check">✓</div>
+
+                <div>
+                    <h3>Autoconfiança</h3>
+
+                    <p>
+                        O treinamento pode ajudar o praticante
+                        a desenvolver confiança e autocontrole.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="benefit">
+
+                <div class="check">✓</div>
+
+                <div>
+                    <h3>Foco e concentração</h3>
+
+                    <p>
+                        Os exercícios exigem atenção,
+                        precisão e controle dos movimentos.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="benefit">
+
+                <div class="check">✓</div>
+
+                <div>
+                    <h3>Disciplina</h3>
+
+                    <p>
+                        A rotina de treinamento incentiva
+                        dedicação e perseverança.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTATO -->
+
+    <section class="contact">
+
+        <h2>Comece sua jornada</h2>
+
+        <p>
+            Descubra os benefícios do Karatê e encontre
+            uma academia para iniciar seus treinamentos.
+        </p>
+
+        <a href="#" class="btn">
+            Quero começar
+        </a>
+
+    </section>
+
+
+    <!-- RODAPÉ -->
+
+    <footer>
+
+        <p>
+            © 2026 Karatê+ | Disciplina, Força e Respeito
+        </p>
+
+    </footer>
+
+</body>
+</html>
+  
+</body>
+</html>
